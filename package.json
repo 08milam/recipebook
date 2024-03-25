@@ -1,0 +1,18 @@
+{
+  "name": "dietmate",
+  "version": "1.0.0",
+  "description": "SETUP APPLICATION  * ls  * npm init --y",
+  "scripts": {
+    "start": "npm run server & npm run client",
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
+    "server": "node ./server/server.js",
+    "client": "cd client && npm start "
+  },
+  "keywords": [],
+  "author": "Matthew Milam",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "if-env": "^1.0.4"
+  }
+}

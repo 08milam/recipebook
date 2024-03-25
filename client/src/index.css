@@ -1,0 +1,577 @@
+/* SelectedRecipes.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #041421;
+  color: #d0d6d6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* ------------------------------------------------------------------------------------------- */
+/* APP.JS */
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  background-color: #001b2e;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90vw; /* Change from 90dvw to 90vw */
+  margin-top: 72px;
+  position: absolute;
+  box-shadow: 0 0 3px rgb(0, 0, 0);
+  border: 1px solid #1a1b22;
+}
+
+hr {
+  border: 1px solid #2e313f;
+}
+
+.contents {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Adjust column size as needed */
+  gap: 20px; /* Adjust gap between grid items */
+}
+
+.menu-heading {
+  position: absolute; /* or position: fixed; */
+  top: 0; /* Adjust according to your layout */
+  width: 100%; /* Span 100% of the parent container */
+}
+.line{
+  position: absolute;
+  left: -4px;
+  width: 99%;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* LISTHEADER.JS */
+.list-header {
+  width: 98%;
+  display: flex;
+  margin: 0 5px;
+  justify-content: space-between;
+}
+
+.button-container button {
+  padding: 23px 26px;
+  border-radius: 5px;
+  margin: 5px 20px;
+  background-color: #5e4d9b;
+  color: #d0d6d6;
+  border: 1px solid #6768ab;
+  font-size: 20px;
+}
+.button-container button:hover {
+  background-color: #6768ab;
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------------- */
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.444);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(0.5dvi);
+
+  z-index: 1;
+}
+
+.modal {
+  width: 92%;
+  height: 92%;
+  background-color: rgb(106, 106, 106);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px 0px rgb(0, 0, 0);
+  overflow: auto; /* Added */
+}
+
+.recipeItems {
+  background-color: transparent;
+}
+
+.modal .form-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .form-title-container button {
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-size: 40px;
+}
+
+.modal .form-title-container button:hover {
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="checkbox"] {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Create a custom checkbox */
+  width: 100%;
+  height: 20px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing between checkbox and label */
+  border-radius: 12px;
+  background-color: gray;
+}
+
+/* Style the checked state of the checkbox */
+input[type="checkbox"]:checked {
+  width: 100%;
+  background-color: #ff0000; /* Change background color when checked */
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* NAVBAR.JS */
+.navbar {
+  background-color: #001b2e;
+  border-bottom: 1px solid #2e313f;
+  width: 100vw;
+  margin-top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+nav .title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #d0d6d6;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li button {
+  border: transparent;
+  background-color: transparent;
+  color: #d0d6d6;
+  padding: px;
+  display: block;
+  margin: 0 0.5rem;
+}
+
+nav ul li button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* LIST ITEM */
+.list-item {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #2e313f;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container button {
+  padding: 8px 26px;
+  border-radius: 5px;
+  margin: 5px 20px;
+  color: #d0d6d6;
+  font-size: 20px;
+}
+
+.button-container .edit {
+  background-color: rgb(52, 80, 118);
+  border: none;
+}
+
+.button-container .delete {
+  background-color: rgb(137, 19, 19);
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-bottom: 5px;
+}
+
+.recipe-image {
+  width: 100%;
+}
+
+.recipe-title {
+  text-align: center;
+}
+
+.item-content {
+  padding-left: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* EDIT.JS */
+
+.editoverlay {
+  position: fixed;
+  backdrop-filter: blur(1dvi);
+  -webkit-backdrop-filter: blur(0.5dvi);
+  left: 0;
+  width: 100vw;
+  height: 92.5vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editmodal {
+  background-color: #495157;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90vw;
+  position: absolute;
+
+  box-shadow: 0 0 3px rgb(0, 0, 0);
+  border: 1px solid #1a1b22;
+}
+
+.editmodal .edit-form-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editmodal .edit-form-title-container button {
+  border: none;
+  background-color: transparent;
+  color: #d0d6d6;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.editmodal .edit-form-title-container button:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* SELECTEDRECIPES.JS */
+
+.diet-list-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.diet-list-menu div {
+  margin-top: -10px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.card {
+  min-height: 25rem;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #b9b8b8; /* Light gray background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  color: black;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card > div {
+  display: none;
+}
+
+.card:hover > div {
+  display: block;
+}
+
+.card > div > p {
+  margin-bottom: 10px;
+}
+
+.card > div > ul {
+  padding-left: 20px;
+}
+
+.notebox {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notecontent {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.recipe {
+  background-color: rgb(116, 116, 116);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.save-recipe {
+  padding: 10px 26px;
+  border-radius: 5px;
+  margin: 5px 20px;
+  background-color: #5e4d9b;
+  color: #d0d6d6;
+  border: 1px solid #6768ab;
+  font-size: 20px;
+}
+/* ------------------------------------------------------------------------------------------- */
+/* AUTH.JS */
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* Cover the entire container */
+  background-image: url('../../images/background.webp');
+}
+
+.auth-container-box{
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(0.5dvi);
+  border-top: 1px solid rgb(120, 119, 119);
+  border-bottom: 1px solid rgb(120, 119, 119);
+}
+
+.auth-container-box form{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container-box form h2{
+  text-shadow: 0 0 5px black;
+}
+
+.auth-container-box input{
+  border: 1px solid gray;
+  width: 300px;
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.auth-container-box h1{
+  color: #fafafa;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 0 0 5px black;
+}
+
+.create {
+  margin: 20px;
+  background-color: rgb(83, 35, 83);
+  border: 1px solid rgb(89, 12, 112) !important;
+  color: #b9b8b8;
+  /* width: 315px !important;   */
+}
+
+.create:hover {
+  cursor: pointer;
+}
+
+.auth-option{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-option button{
+  border: 1px solid gray;
+  width: 158px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #151515;
+  margin-bottom: 30px;
+}
+
+.auth-option button:first-child {
+  border-radius: 5px 0 0 5px ;
+}
+
+.auth-option button:nth-child(2) {
+  border-radius: 0 5px 5px 0; 
+}
+
+
+.auth-option button:hover{
+  cursor: pointer;
+}
+
+.error-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+
+.error-message {
+  color: rgb(255, 255, 255); /* Change color to whatever you prefer */
+  font-weight: 700;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+/* ------------------------------------------------------------------------------------------- */
+/* CALENDER.JS */
+
+.cc-container {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(75, 75, 75);
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-container {
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background-color: wheat;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.day {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.month {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.current-day {
+  background-color: #101010; /* Example background color for the current day */
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+
+.close-button:hover{
+  cursor: pointer;
+}
+
+.delete-me{
+  background-color: rgb(197, 22, 22);
+  width: 200px;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+
+.delete-me:hover{
+  cursor: pointer;
+  background-color: red;
+}
