@@ -4,15 +4,11 @@ Welcome to our Recipe Book App, where culinary delights await you at every swipe
 
 HOW TO RUN 
 ------------------------------------
- - cd client
- - npm i
- - npm start
- - cd ..
- - cd server
- - npm i
- - psql < data.sql
- - npm start
-
+```bash
+  npm run build 
+  psql < data.sql
+  npm run start
+```
 
 # React Project Setup Guide
 
@@ -35,7 +31,7 @@ This guide outlines the steps to set up a React project for building a recipe bo
 2. Delete the following files: `App.css`, `app.test.js`, `logo.svg`, `reportWebVitals.js`, and `setupTests.js`.
 3. Open `index.js` and replace its content with the provided code snippet.
 
-```jsx
+```jsx 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -169,6 +165,14 @@ export default App;
 - npm start
 
   - Starts the development server.
+
+- npm run build
+
+  - Bundles the app into static files for production.
+
+- npm test
+
+  - Starts the test runner.
 
 - npm run eject
 

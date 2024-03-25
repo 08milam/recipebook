@@ -4,9 +4,10 @@
   "description": "SETUP APPLICATION  * ls  * npm init --y",
   "scripts": {
     "start": "npm run server & npm run client",
-    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
-    "server": "node ./server/server.js",
-    "client": "cd client && npm start "
+    "build": "cd server && npm install && cd .. && cd client && npm install",
+    "server": "cd server && npm start && cd ..",
+    "client": "cd client && npm start ", 
+    "matt": "echo matt"
   },
   "keywords": [],
   "author": "Matthew Milam",
