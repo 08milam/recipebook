@@ -64,7 +64,7 @@ const Modal = ({ mode, setShowModal, getData, task, recipe }) => {
     <div className="overlay">
       <div className="modal">
         <div className="form-title-container">
-          <h1>{mode} a recipe</h1>
+          <h1>View a recipe</h1>
           <button onClick={() => setShowModal(false)}>x</button>
         </div>
         <hr />
