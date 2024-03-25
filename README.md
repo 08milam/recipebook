@@ -21,7 +21,6 @@ API USED
 ------------------------------------
 https://spoonacular.com/food-api
 - User: This entity stores the user's email and password. The user email serves as a unique identifier or a username for user accounts within the application.
-- Notes: This entity is related to the user and to store various pieces of information created by the user. Each note has a unique identifier (user email), the user's email (linking it to the User entity), a title, the content of the note itself, a date (presumably the date the note was created or last modified), and a recipe id (which suggests that notes can be associated with specific recipes).
 - User (Recipes): This is to be a second instance or aspect of the User entity, which is specifically related to recipes. It holds a recipe id and a recipe title, indicating that users can create or store recipes within the application.
 - GET https://api.spoonacular.com/recipes/random
 - When you make a GET request to this endpoint, you're essentially asking the Spoonacular API to provide you with a random recipe. This could be any recipe from their database, selected at random by the API's algorithm.
