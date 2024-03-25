@@ -1,6 +1,6 @@
 Welcome to our Recipe Book App, where culinary delights await you at every swipe! Whether you're a seasoned chef or just starting your culinary journey, our app is your passport to a world of flavors, aromas, and tantalizing tastes. Dive into a treasure trove of recipes meticulously curated to inspire your inner chef and tantalize your taste buds. From mouthwatering mains to delectable desserts, we've got something for every craving and occasion. Get ready to embark on a culinary adventure like no other, where every recipe is a story waiting to be told and every dish a masterpiece waiting to be created. Join us as we journey through the art of cooking and savor the magic of flavors that bring people together. Welcome to your new kitchen companion – let's start cooking!
 
-![dietapp schema](./recipe book.png)
+![dietapp schema](./recipebook.png)
 
 HOW TO RUN 
 ------------------------------------
